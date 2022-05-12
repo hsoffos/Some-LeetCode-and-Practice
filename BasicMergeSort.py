@@ -18,7 +18,6 @@ def mergesort(mylist):
         # index for main list
         k = 0
 
-
         while i < len(left) and j < len(right):
             if left[i] <= right[j]:
                 mylist[k] = left[i]
@@ -37,7 +36,6 @@ def mergesort(mylist):
             k += 1
 
         print(mylist)
-        return mylist
 
 
 thelist = [123, 897, 134, 58, 76, 193, 37, 2, 6, 9, 145, 154, 89]
