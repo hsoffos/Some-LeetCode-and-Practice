@@ -3,14 +3,15 @@ from BinaryTree import *
 
 
 def are_identical(root1, root2):
-    if not root1 and not root2:
+    # Depth First Search function : Recursion all the way down the left, then right -> in-order traversal of tree
+    if not root1 and not root2:     # Both empty return True
         return True
 
-    if root1 and root2:
-        print(root1.data, root2.data)
+    if root1 and root2:             # If they both exist,
+        print(root1.data, root2.data)   # print data,
         return (root1.data == root2.data and
-                are_identical(root1.left, root2.left) and
-                are_identical(root1.right, root2.right))
+                are_identical(root1.left, root2.left) and   # call recursion on left branch,
+                are_identical(root1.right, root2.right))    # then right branch to traverse tree in order
 
     return False
 
