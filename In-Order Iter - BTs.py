@@ -38,11 +38,11 @@ class InorderIterator:
 
 
 def inorder_using_iterator(root):
-    iter = InorderIterator(root)
+    itr = InorderIterator(root)
     result = ""
-    while iter.has_next():
-        ptr = iter.get_next()
-        if iter.has_next():
+    while itr.has_next():
+        ptr = itr.get_next()
+        if itr.has_next():
             result += str(ptr.data) + ", "
         else:
             result += str(ptr.data)
